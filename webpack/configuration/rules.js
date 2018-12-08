@@ -1,8 +1,8 @@
 // Dependencies
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 // Environment
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Package.json
 import pkg from '../../package.json'
@@ -27,7 +27,7 @@ export default type => {
       },
       exclude: /node_modules/
     }
-  ];
+  ]
 
   if (!isDevelopment || type === 'server') {
     rules.push({
@@ -39,7 +39,7 @@ export default type => {
           'sass-loader'
         ]
       })
-    });
+    })
   } else {
     rules.push({
       test: /\.scss$/,
@@ -48,8 +48,8 @@ export default type => {
         'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]',
         'sass-loader'
       ]
-    });
+    })
   }
 
-  return rules;
-};
+  return rules
+}
