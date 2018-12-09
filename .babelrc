@@ -11,9 +11,11 @@
     },
     "development": {
       "plugins": [
-        "react-hot-loader/babel",
-        ["import", { libraryName: "antd-mobile" }] // `style: true` 会加载 less 文件
+        "react-hot-loader/babel"
       ]
     }
-  }
+  },
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
 }

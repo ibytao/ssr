@@ -6,16 +6,25 @@ import { Button, WhiteSpace, WingBlank } from 'antd-mobile'
 // Styles
 import styles from './style.scss'
 
-class Home extends Component {
+const withWrap = (WrappedComponent) => (
+  class extends Component {
+    render() {
+      console.log('------------------')
+      return <WrappedComponent {...this.props} />
+    }
+  }
+)
+
+@withWrap
+export default class Home extends Component {
   render() {
+    // console.log(this.props.c)
     return (
       <div className={styles.home}>
         <Button>Default</Button>
         <h1>Home</h1>
         <Link to="/about">About</Link>
       </div>
-    );
+    )
   }
 }
-
-export default Home;

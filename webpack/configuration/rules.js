@@ -15,13 +15,13 @@ export default type => {
         loader: 'babel-loader',
         query: {
           presets: [
-            [
-              'env', {
-                modules: false,
-                node: pkg.engines.node,
-                browsers: pkg.browserslist
-              }
-            ]
+            // [
+            //   'env', {
+            //     modules: false,
+            //     node: pkg.engines.node,
+            //     browsers: pkg.browserslist
+            //   }
+            // ]
           ]
         }
       },
